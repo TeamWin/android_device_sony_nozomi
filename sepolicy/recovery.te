@@ -1,0 +1,11 @@
+#recovery set to permissive regarding the commit below
+#https://github.com/omnirom/android_external_sepolicy/commit/22f78c234a1aaa7a541f0c665736c710f6a27288
+#take care that you need to pach CM 12.1 sepolicy sources
+#because CM 12.1 doesn't set recovery domain to permissive
+
+##Twrp
+#recovery_only(`
+#  allow recovery kernel:security setenforce;
+#  allow recovery selinuxfs:file write;
+#')
+
